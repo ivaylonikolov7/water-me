@@ -1,3 +1,5 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 .App {
   text-align: center;
 }
@@ -76,4 +78,20 @@ button{
   color: #001314;
   margin-right: 20px;
   text-decoration: none;
+}
+table#leaderboard{
+	background-color:#fff;
+	border-radius: 10px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+table tr th {
+	border-right: 1px solid #000;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+table tr th:last-of-type{
+	border-right: 0 solid #000;
 }
