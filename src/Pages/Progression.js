@@ -1,27 +1,22 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import secrets from '../secrets';
-import ImageGallery from 'react-image-gallery'; 
+import React from 'react';
+import { Player } from 'video-react';
+import secrets from '../secrets.js';
+import '../../node_modules/video-react/dist/video-react.css';
+// Render a YouTube video player
+
 
 function Progression(){
-    const [pictures, setPictures] = useState([]);
-    useEffect(async ()=>{
-        let picturesReq = await axios.get(secrets.server_ip + 'progression');
-        setPictures(picturesReq.data.map((res)=>{
-            return {
-                original: secrets.server_ip + res
-            }
-        }));
-    }, [])
-    return <>
-    <div style={{
-        width: "500px",
-        margin: "0 auto",
-        marginTop: "50px"
+    let backend = secrets.BACKEND;
+    return <div style={{
+        width: 450,
+        margin: '0 auto',
+        textAlign: 'center'
     }}>
-        <ImageGallery width="500px" items = {pictures} />
+        <Player fluid={false} width={450} src={`${backend}video.mp4`} style={{
+        margin: '0 auto',
+        textAlign: 'center'
+    }}/>
     </div>
-    </>
 }
 
 export default Progression;

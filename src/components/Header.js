@@ -1,18 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import {ReactComponent as PlantSVG } from '../images/plant-svgrepo-com.svg';
 
 function Header(){
-    return (<>
+    return (<div style = {{
+        marginBottom: '30px'
+    }}>
         <ul id="header">
             <li>
-                <Link to='/'>Home</Link>
+                <PlantSVG width="30px"/>
             </li>
             <li>
-                <Link to='/leaderboard'>Leaderboard</Link>
+                <NavLink to='/'>Home</NavLink>
             </li>
             <li>
-                <Link to='/progression'>Progression</Link>
+                <NavLink to='/leaderboard'>Leaderboard</NavLink>
+            </li>
+            <li>
+                <NavLink to='/progression'>Progression</NavLink>
             </li>
         </ul>
-    </>)
+    </div>)
 }
 export default Header;

@@ -1,4 +1,4 @@
 let secrets = {
-    server_ip: 'http://raspberrypi.local:3000/'
+    BACKEND: 'http://localhost:3001/'
 }
 export default secrets;

@@ -5,8 +5,9 @@ import secrets from '../secrets.js'
 function Leaderboard(){
 	let [sortedCountries, setSortedCountries] = useState([]);
 	let [loading, setLoading] = useState(true);
+	console.log(`${secrets.BACKEND}leaderboard`)
 	useEffect( async ()=>{
-		let result = await axios.get(`${secrets.server_ip}leaderboard`);
+		let result = await axios.get(`${secrets.BACKEND}leaderboard`);
 		setSortedCountries(result.data);
 		setLoading(false);
 	}, [])

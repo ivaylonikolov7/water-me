@@ -1,22 +1,17 @@
-import {ReactComponent as PlantSVG } from '../images/plant-svgrepo-com.svg';
 import TwitchStream from '../components/TwitchStream';
 import { useState } from 'react';
 import axios from 'axios'
 import secrets from '../secrets.js'
+import YoutubeStream from '../components/YoutubeStream';
 function Index(){
-    let [showStream, setShowStream] = useState(false);
-    console.log(secrets.server_ip);
-
-    return (<> 
-        <PlantSVG width="150px"/>
+    return <> 
+        <YoutubeStream/>
         <button onClick={()=>{
-            //setShowStream(true);
             axios.get(`${secrets.server_ip}water-me`).then((response)=>{
-                console.log(response);
+                console.log('yo');
             })
         }}>Water me</button>
-        {showStream && <TwitchStream />}
-    </>)
+    </>
 
 }
 
