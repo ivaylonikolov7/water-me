@@ -6,7 +6,7 @@ function Index(){
     return <> 
         <YoutubeStream/>
         <button onClick={()=>{
-            axios.get(`${secrets.RPI}water-me`).then((response)=>{
+            axios.get(`${secrets.BACKEND}plant/water`).then((response)=>{
                 console.log('yo');
             })
         }}>Water me</button>
