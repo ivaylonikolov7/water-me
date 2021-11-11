@@ -12,7 +12,7 @@ function Progression(){
         margin: '0 auto',
         textAlign: 'center'
     }}>
-        <Player fluid={false} width={450} src={`${backend}video.mp4`} style={{
+        <Player fluid={false} width={450} src={`https://water-plant-rpi.s3.eu-central-1.amazonaws.com/video/output.mp4`} style={{
         margin: '0 auto',
         textAlign: 'center'
     }}/>
