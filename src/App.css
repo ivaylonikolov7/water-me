@@ -59,6 +59,15 @@ button{
   padding: 5px 15px;
   cursor: pointer;
 }
+
+button:hover{
+  background-color: #720e07;
+  color: #fff;
+}
+button:active{
+  background-color:#9b1d20;
+  color: #fff;
+}
 #header li{
   display:inline-block;
 }
